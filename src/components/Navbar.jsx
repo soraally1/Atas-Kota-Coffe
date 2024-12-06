@@ -15,9 +15,10 @@ function Navbar() {
 
                     {/* Middle - Navigation Links */}
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link to="/about" className="text-gray-700 font-sans font-[500]  hover:text-gray-900">About</Link>
+                        <Link to="/" className="text-gray-700 font-sans font-[500]  hover:text-gray-900">Home</Link>
                         <Link to="/menu" className="text-gray-700 font-sans font-[500] hover:text-gray-900">Menu</Link>
-                        <Link to="/categories" className="text-gray-700 font-sans font-[500] hover:text-gray-900">Categories</Link>
+                        <Link to="/Location" className="text-gray-700 font-sans font-[500] hover:text-gray-900">Location</Link>
+                        <Link to="/Gallery" className="text-gray-700 font-sans font-[500] hover:text-gray-900">Galery</Link>
                     </div>
 
                     {/* Right side - Contact, Account, Cart */}

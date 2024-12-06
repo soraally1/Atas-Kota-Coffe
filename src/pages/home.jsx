@@ -27,14 +27,14 @@ function Home() {
                 </div>
             </div>
             {/* Horizontal scroll section / menu items */}
-            <div className="pt-12 px-4 md:px-12 lg:px-24 bg-blue-400">
+            <div className="px-4 md:px-12 lg:px-24 ">
                 {/* Title */}
-                <div className="text-left mb-6 bg-purple-400">
+                <div className="text-left mb-6">
                     <h2 className="text-3xl font-sans font-[700] italic ">Best Seller</h2>
                 </div>
 
                 {/* Scrollable Container */}
-                <div className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide bg-pink-400">
+                <div className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide ">
                     {/* Menu Item 1 */}
                     <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
                         <div className="relative">
