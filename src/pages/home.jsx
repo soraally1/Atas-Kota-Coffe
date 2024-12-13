@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function Home() {
+const Home = () => {
     return (
-        <div className="w-screen min-h-screen bg-gray-100 absolute top-0 left-0 right-0">
+        <div className="w-screen min-h-screen bg-[#FFFBF2] absolute top-0 left-0 right-0">
             {/* Hero Section */}
             <div className="pt-24 px-4 md:px-12 lg:px-24 ">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -27,147 +28,158 @@ function Home() {
                 </div>
             </div>
             {/* Horizontal scroll section / menu items */}
-            <div className="pt-12 px-4 md:px-12 lg:px-24 bg-blue-400">
+            <div className="px-4 md:px-12 lg:px-24 ">
                 {/* Title */}
-                <div className="text-left mb-6 bg-purple-400">
+                <div className="text-left mb-6">
                     <h2 className="text-3xl font-sans font-[700] italic ">Best Seller</h2>
                 </div>
 
                 {/* Scrollable Container */}
-                <div className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide bg-pink-400">
+                <div className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide ">
                     {/* Menu Item 1 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-CaffeLatte bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Caffe Latte</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/caffe-latte" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                <div className="h-[300px] w-full bg-CaffeLatte bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Caffe Latte</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 2 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-Alfredo bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Alfredo Pasta</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/alfredo-pasta" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-Alfredo bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Alfredo Pasta</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 3 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-ChickenPasta bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Chicken Pasta</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/chicken-pasta" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-ChickenPasta bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Chicken Pasta</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 4 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-RotiBakar bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Roti Bakar</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/item" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-RotiBakar bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Roti Bakar</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 5 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Espresso</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/espresso" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Espresso</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 6 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Espresso</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/espresso" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Espresso</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                     {/* Menu Item 7 */}
-                    <div className="flex-none w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
-                        <div className="relative">
-                            {/* Image with gradient overlay */}
-                            <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                            
-                            {/* Text overlay */}
-                            <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
-                                <h3 className="font-semibold text-xl">Espresso</h3>
-                                <p className="pl-1 text-white">Rp 21.000</p>
-                            </div>
+                    <Link to="/menu/espresso" className="flex-none">
+                        <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden">
+                            <div className="relative">
+                                {/* Image with gradient overlay */}
+                                <div className="h-[300px] w-full bg-Espresso bg-cover bg-center" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                                
+                                {/* Text overlay */}
+                                <div className="absolute bottom-0 text-left left-0 p-4 text-white ">
+                                    <h3 className="font-semibold text-xl">Espresso</h3>
+                                    <p className="pl-1 text-white">Rp 21.000</p>
+                                </div>
 
-                            {/* Plus button */}
-                            <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
-                                <span className="text-xl pb-1">+</span>
-                            </button>
+                                {/* Plus button */}
+                                <button className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                                    <span className="text-xl pb-1">+</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </div>
