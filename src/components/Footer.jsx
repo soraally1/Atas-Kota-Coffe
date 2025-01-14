@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     return (
         <section id="footer" className="w-screen min-h-[50vh] top-0 left-0 bg-[#E6D5B7]">
-           <div className="py-16  pl-32 pr-40 flex xl:flex-row md:flex-row flex-col justify-between">
+           <div className="py-16 pl-8 pr-10 md:pl-32 md:pr-40 flex xl:flex-row md:flex-row flex-col justify-between">
             {/* Logo and description */}
             <div className="flex flex-col xl:w-1/5 sm:w-full">
                 <div className="w-full h-24 bg-LogoFooter bg-contain bg-no-repeat bg-center">
                 </div>
-                <p className="text-gray-600 font-sans font-[500] text-left text-[16px] md:text-xl">
+                <p className="text-gray-600 font-sans font-[500] text-left text-[16px] md:text-xl pb-4">
                 Nikmati setiap momen dengan secangkir kopi terbaik dari cafe Atas Kota. Tempat di mana cerita dimulai dan kenangan tercipta. Kopi, cinta, dan kehangatan untuk hari Anda
                 </p>
             </div>
@@ -37,9 +37,9 @@ const Footer = () => {
                 <h1 className="font-sans font-[700] text-2xl underline underline-offset-2">
                     Follow Us
                 </h1>
-                <ul className="flex flex-col gap-2">
-                    <li className="xl:text-left md:text-left text-center">
-                        <a href="https://www.instagram.com/ataskota?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="font-sans font-[600] text-[24px] flex items-center gap-2">
+                <ul className="flex flex-col items-center md:items-start gap-2">
+                    <li className="xl:text-left sm:text-center">
+                        <a href="https://www.instagram.com/ataskota?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="font-sans font-[600] text-[24px] flex text-center gap-2">
                             Facebook
                         </a>
                     </li>

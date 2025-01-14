@@ -1,8 +1,8 @@
 
 const Location = () => {
     return (
-        <section id="Location" className="w-full min-h-[70vh] top-0 bg-brownpage m-0 p-0">   
-            <div className="pt-32 px-4"> 
+        <section id="Location" className="w-full min-h-[60vh] pb-10 md:pb-0 top-0 bg-brownpage m-0 p-0">   
+            <div className="pt-10 px-4"> 
                 {/* Upper/title */}
                 <div className="flex-col mb-8">
                     <h1 className="font-sans font-[700] text-xl">

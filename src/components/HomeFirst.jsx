@@ -98,13 +98,13 @@ const HomeFirst = () => {
     return (
         <section id="Top" className="w-full min-h-screen bg-brownpage top-0 m-0 p-0">
             {/* Hero Section */}
-            <div className="pt-24 px-4 md:px-12 lg:px-24">
+            <div className="pt-32 md:pt-24 px-4 md:px-12 lg:px-24">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                     {/* Left Side - Icon and Description */}
                     <div className="flex-1 flex flex-col items-start space-y-8 max-w-lg xl:ml-24 2xl:ml-60">
                         {/* Large Icon/Logo */}
                         <div className="w-full flex justify-center">
-                            <div className="h-48 w-96 2xl:h-64 2xl:w-[28rem] bg-Logo bg-contain bg-no-repeat bg-center"/>
+                            <div className="h-24 w-96 2xl:h-64 2xl:w-[28rem] bg-Logo bg-contain bg-no-repeat bg-center"/>
                         </div>
                         
                         {/* Description */}
@@ -116,7 +116,7 @@ const HomeFirst = () => {
 
                     {/* Right Side - Coffee Image */}
                     <div className="flex-1 flex justify-center items-center h-[525px]">
-                        <div className="h-[340px] w-[400px] xl:h-[442px] xl:w-[520px] 2xl:h-[510px] 2xl:w-[600px] bg-Coffee bg-cover bg-center bg-no-repeat rounded-2xl"/>
+                        <div className="h-[170px] w-[200px] sm:h-[255px] sm:w-[400px] md:h-[340px] md:h[400px] xl:h-[442px] xl:w-[520px] 2xl:h-[510px] 2xl:w-[600px] bg-Coffee bg-cover bg-center bg-no-repeat rounded-2xl"/>
                     </div>
                 </div>
             </div>
@@ -130,7 +130,7 @@ const HomeFirst = () => {
                 </div>
 
                 {/* Scrollable Container */}
-                <div className="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide">
+                <div className="flex overflow-x-auto space-x-2 md:space-x-6 pb-6 scrollbar-hide">
                     {loading ? (
                         <div className="w-full flex justify-center items-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
@@ -146,10 +146,10 @@ const HomeFirst = () => {
                                 className="flex-none cursor-pointer"
                                 onClick={() => handleProductClick(product.id)}
                             >
-                                <div className="w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                                <div className="w-[153px] md:w-[230px] bg-white rounded-2xl shadow-md relative overflow-hidden hover:shadow-lg transition-shadow duration-300">
                                     <div className="relative">
                                         <div 
-                                            className="h-[300px] w-full bg-cover bg-center" 
+                                            className="h-[200px] md:h-[300px] w-full bg-cover bg-center" 
                                             style={{ backgroundImage: `url(${product.imageUrl})` }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
@@ -163,8 +163,8 @@ const HomeFirst = () => {
                                         </div>
                                         
                                         <div className="absolute bottom-0 text-left left-0 p-4 text-white">
-                                            <h3 className="font-semibold text-xl">{product.title}</h3>
-                                            <p className="pl-1 text-white">Rp {product.price.toLocaleString()}</p>
+                                            <h3 className="font-semibold text-base md:text-xl">{product.title}</h3>
+                                            <p className="pl-1 text-white text-sm md:text-base">Rp {product.price.toLocaleString()}</p>
                                             <div className="flex items-center mt-1 text-sm text-white/80">
                                                 <span>{product.ratingCount} ratings</span>
                                             </div>
@@ -173,7 +173,7 @@ const HomeFirst = () => {
                                         <button 
                                             onClick={(e) => handleAddToCart(e, product)}
                                             disabled={addingToCart === product.id}
-                                            className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors disabled:opacity-50"
+                                            className="absolute bottom-4 right-4 bg-white text-black rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors disabled:opacity-50"
                                         >
                                             {addingToCart === product.id ? (
                                                 <div className="w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin" />

@@ -51,7 +51,7 @@ const HomeMenu = () => {
         .slice(0, 8); // Only show first 8 products
 
     return (
-        <section id="menu" className="w-screen min-h-[75vh] border-t-2 border-[#D9D9D9] bg-brownpage">
+        <section id="menu" className="min-w-screen min-h-[75vh] border-t-2 border-[#D9D9D9] bg-brownpage">
             {/* Success Toast */}
             {showToast && (
                 <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 transition-all duration-300">
@@ -168,9 +168,9 @@ const HomeMenu = () => {
                     </div>
                 </div>
                 <div className="w-full min-h-full pt-8">
-                    <div className="mb-8">
-                        <h2 className="font-sans font-[700] text-2xl mb-2">Menu Kami</h2>
-                        <p className="font-sans font-[500] text-[#716C6C]">Nikmati berbagai menu kami yang banyak variannya</p>
+                    <div className="mb-8 text-center items-center">
+                        <h2 className="font-sans font-[700] text-lg mr-0 md:text-2xl mb-2">Menu Kami</h2>
+                        <p className="font-sans font-[500] text-[#716C6C] text-base md:text-lg mr-0 text-center">Nikmati berbagai menu kami yang banyak variannya</p>
                     </div>
                     <div className="flex flex-wrap gap-4 px-6">
                         {loading ? (
@@ -180,22 +180,22 @@ const HomeMenu = () => {
                         ) : (
                             filteredProducts.map((product) => (
                                 <Link to={`/menu/item/${product.id}`} key={product.id}>
-                                    <div className="w-[230px] bg-white rounded-2xl shadow-2xl relative overflow-hidden">
+                                    <div className="w-[153px] md:w-[230px] bg-white rounded-2xl shadow-2xl relative overflow-hidden">
                                         <div className="relative">
                                             <div 
-                                                className="h-[300px] w-full bg-cover bg-center" 
+                                                className="h-[200px] md:h-[300px] w-full bg-cover bg-center" 
                                                 style={{ backgroundImage: `url(${product.imageUrl})` }}
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                                             
                                             <div className="absolute bottom-0 text-left left-0 p-4 text-white">
-                                                <h3 className="font-semibold text-xl">{product.title}</h3>
-                                                <p className="pl-1 text-white">Rp {product.price.toLocaleString()}</p>
+                                                <h3 className="font-semibold text-base md:text-xl">{product.title}</h3>
+                                                <p className="pl-1 text-white text-sm md:text-base">Rp {product.price.toLocaleString()}</p>
                                             </div>
 
                                             <button 
                                                 onClick={(e) => handleAddToCart(e, product)}
-                                                className="absolute bottom-4 right-4 bg-white text-black rounded-full w-8 h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
+                                                className="absolute bottom-4 right-4 bg-white text-black rounded-full w-6 h-6 md:w-8 md:h-8 flex items-center justify-center shadow-md hover:bg-gray-100 transition-colors"
                                             >
                                                 <span className="text-xl pb-1">+</span>
                                             </button>
@@ -206,7 +206,7 @@ const HomeMenu = () => {
                         )}
                     </div>
                     <Link to="/menu" className="flex justify-center mt-4">
-                        <div className="p-4 bg-[#E6D5B7] m-6 min-w-64 rounded-[26px]">
+                        <div className="p-3 md:p-4 bg-[#E6D5B7] m-6 min-w-32 md:min-w-64 rounded-[26px]">
                             <h1 className="font-sans font-[500] text-[20px]">See All</h1>
                         </div>
                     </Link>

@@ -143,14 +143,6 @@ const EditProduct = () => {
     return (
         <div className="bg-brownpage min-h-screen relative flex flex-col md:flex-row">
             {/* Mobile Menu Button */}
-            <button 
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="md:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg"
-            >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
 
             {/* Desktop Sidebar */}
             <div className={`${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 transform transition-transform duration-200 ease-in-out fixed md:relative w-64 h-screen bg-white border-r-2 border-[#D9D9D9] z-40 md:w-1/6 hidden md:block`}>
@@ -208,6 +200,11 @@ const EditProduct = () => {
                     <Link to="/admin/orders" className="flex flex-col items-center p-2">
                         <MdShoppingCart className="w-6 h-6 text-gray-600" />
                         <span className="text-xs mt-1">Orders</span>
+                    </Link>
+                    <Link 
+                        to="/admin/order-confirmation" className="flex flex-col items-center p-2">
+                        <MdPayment className="w-6 h-6 mr-2"/>
+                        <span className="text-xs mt-1">Payment <br/> Confirmation</span>
                     </Link>
                     <Link to="/admin/transaction" className="flex flex-col items-center p-2">
                         <MdDashboard className="w-6 h-6 text-gray-600" />

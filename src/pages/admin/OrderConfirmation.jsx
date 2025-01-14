@@ -406,12 +406,6 @@ const OrderConfirmation = () => {
     return (
         <div className="bg-brownpage min-h-screen relative flex flex-col md:flex-row">
             {/* Mobile Menu Button */}
-            <button 
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="md:hidden fixed top-4 left-4 z-50 p-2 bg-white rounded-lg shadow-lg"
-            >
-                <BarsArrowDownIcon className="w-6 h-6" />
-            </button>
 
             {/* Sidebar */}
             <div className={`fixed md:sticky top-0 left-0 h-screen w-64 bg-white border-r-2 border-[#D9D9D9] transform transition-transform duration-200 ease-in-out ${
@@ -441,10 +435,10 @@ const OrderConfirmation = () => {
 
                         <Link 
                             to="/admin/order-confirmation" 
-                            className="flex items-center px-4 py-3 rounded-xl bg-[#E6D5B8] hover:bg-[#d4b87c] transition-colors"
+                            className="flex items-center px-4 py-3 rounded-xl bg-[#EBEBEB] hover:bg-[#d9d9d9] transition-colors"
                         >
                             <MdPayment className="w-6 h-6 mr-3 text-gray-700" />
-                            <span className="font-sans font-[600] text-lg">Payment Confirmation</span>
+                            <span className="font-sans font-[600] text-lg text-left">Payment Confirmation</span>
                         </Link>
 
                         <Link 
@@ -475,7 +469,7 @@ const OrderConfirmation = () => {
             )}
 
             {/* Mobile Bottom Navigation */}
-            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-20">
+            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
                 <div className="flex justify-around items-center py-2">
                     <Link to="/admin/product" className="flex flex-col items-center p-2">
                         <MdInventory className="w-6 h-6 text-gray-600" />
@@ -484,6 +478,11 @@ const OrderConfirmation = () => {
                     <Link to="/admin/orders" className="flex flex-col items-center p-2">
                         <MdShoppingCart className="w-6 h-6 text-gray-600" />
                         <span className="text-xs mt-1">Orders</span>
+                    </Link>
+                    <Link 
+                        to="/admin/order-confirmation" className="flex flex-col items-center p-2">
+                        <MdPayment className="w-6 h-6 mr-2"/>
+                        <span className="text-xs mt-1">Payment <br/> Confirmation</span>
                     </Link>
                     <Link to="/admin/transaction" className="flex flex-col items-center p-2">
                         <MdDashboard className="w-6 h-6 text-gray-600" />
